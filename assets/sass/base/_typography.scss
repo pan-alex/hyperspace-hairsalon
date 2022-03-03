@@ -59,12 +59,12 @@
 		font-weight: _font(weight-bold);
 		line-height: 1.5;
 		margin: 0 0 (_size(element-margin) * 0.25) 0;
+	}
 
 		a {
 			color: inherit;
 			text-decoration: none;
 		}
-	}
 
 	h1 {
 		font-size: 2.75em;

@@ -61,15 +61,15 @@
 				}
 			}
 
-			&:nth-child(1) {
+			&:nth-child(3) {
 			}
 
 			&:nth-child(2) {
-				background-color: rgba(0,0,0,0.05);
+				background-color: _palette(bg2-light);
 			}
 
-			&:nth-child(3) {
-				background-color: rgba(0,0,0,0.1);
+			&:nth-child(1) {
+				background-color: _palette(bg2-medium);
 			}
 
 			&.inactive,

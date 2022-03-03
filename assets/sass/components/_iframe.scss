@@ -1,0 +1,14 @@
+
+iframe {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+
+    @include breakpoint('<=medium') {
+        min-height: 50vw;
+    }
+
+    @include breakpoint('<=small') {
+        min-height: 20rem;
+    }
+}

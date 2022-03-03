@@ -17,8 +17,10 @@
 		border-width:		1px,
 		element-height:		2.75em,
 		element-margin:		2em,
-		sidebar-width:		18em,
-		sidebar-height:		3.5em,	// when <=large is active
+		// sidebar-width:		18em,
+		sidebar-width:		19.5rem,
+		// sidebar-height:		3.5em,	// when <=large is active
+		sidebar-height:     3.8rem,
 		inner-width:		75em
 	);
 
@@ -33,17 +35,21 @@
 
 // Palette.
 	$palette: (
-		bg:					#312450,
-		bg-alt:				darken(#312450, 5),
-		fg:					rgba(255,255,255,0.55),
-		fg-bold:			#ffffff,
-		fg-light:			rgba(255,255,255,0.35),
-		border:				rgba(255,255,255,0.15),
-		border-bg:			rgba(255,255,255,0.05),
-		accent1:			#5e42a6,
-		accent1-alt:		darken(#5e42a6, 10),
-		accent2:			#5052b5,
-		accent2-alt:		darken(#5052b5, 10),
-		accent3:			#b74e91,
-		accent3-alt:		darken(#b74e91, 10)
+		bg:					#f9f9fb,
+		bg-alt:				darken(#f9f9fb, 5),
+		bg2:	            rgb(235, 197, 29),
+		bg2-light:          rgba(235, 197, 29, 0.05),
+		bg2-medium:         rgba(235, 197, 29, 0.1),
+		fg:					rgba(0, 0, 0, 0.55), //rgba(255,255,255,0.55),
+		fg-bold:			rgba(0, 0, 0, 1), //#ffffff,
+		fg-light:			rgba(0, 0, 0, 0.35), //rgba(255,255,255,0.35),
+		fg-alt:             rgba(255,255,255,0.85),
+		border:				rgba(0,0,0,0.1),//rgba(255,255,255,0.15),
+		border-bg:			rgba(0,0,0,0.01),//rgba(255,255,255,0.05),
+		accent1:			#fffff5,
+		accent1-alt:		darken(#fffff5, 5),
+		accent2:			#fff,
+		accent2-alt:		darken(#fff, 5),
+		accent3:			rgb(229, 102, 0), //#b59f84,
+		accent3-alt:		rgba(229, 102, 0, 0.5)//darken(#b59f84, 10)
 	);
