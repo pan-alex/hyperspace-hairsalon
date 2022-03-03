@@ -2796,6 +2796,12 @@ body.is-ie .spotlights > section {
   background-color: rgba(235, 197, 29, 0.05);
 }
 
+.spotlights > section:nth-child(2) a {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
 .spotlights > section:nth-child(1) {
   background-color: rgba(235, 197, 29, 0.1);
 }
