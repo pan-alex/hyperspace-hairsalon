@@ -1,4 +1,5 @@
 @import url("../css/fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700");
 /*
 	Hyperspace by HTML5 UP
 	html5up.net | @ajlkn
@@ -148,6 +149,7 @@ a:hover {
 }
 
 strong, b {
+  font-family: "Lora", serif;
   color: black;
   font-weight: bold;
 }
@@ -161,6 +163,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Lora", serif;
   color: black;
   font-weight: bold;
   line-height: 1.5;
@@ -2715,6 +2718,12 @@ header h6 + p {
 }
 
 /* Spotlights */
+.spotlights .reverse a {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
 .spotlights > section {
   display: -moz-flex;
   display: -ms-flex;
@@ -2796,12 +2805,6 @@ body.is-ie .spotlights > section {
   background-color: rgba(235, 197, 29, 0.05);
 }
 
-.spotlights > section:nth-child(2) a {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-
 .spotlights > section:nth-child(1) {
   background-color: rgba(235, 197, 29, 0.1);
 }
@@ -2850,6 +2853,10 @@ body.is-preload .spotlights > section > .content > .inner {
   .spotlights > section > .content {
     padding: 3em 2em 1em 2em ;
   }
+}
+
+.spotlights.noGradient > section {
+  background-color: #f9f9fb;
 }
 
 /* Table */

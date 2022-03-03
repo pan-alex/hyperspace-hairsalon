@@ -7,6 +7,12 @@
 /* Spotlights */
 
 	.spotlights {
+		
+		& .reverse {
+			& a {
+				order: 2;
+			}
+		}
 		> section {
 			@include vendor('display', 'flex');
 			@include vendor('flex-direction', 'row');
@@ -60,16 +66,12 @@
 					opacity: 1;
 				}
 			}
-
+			
 			&:nth-child(3) {
 			}
 
 			&:nth-child(2) {
 				background-color: _palette(bg2-light);
-
-				& a {
-					order: 2;
-				}
 			}
 
 			&:nth-child(1) {
@@ -133,3 +135,8 @@
 		}
 	}
 
+	.spotlights.noGradient {
+		> section {
+					background-color: _palette(bg);	
+		}
+	}
