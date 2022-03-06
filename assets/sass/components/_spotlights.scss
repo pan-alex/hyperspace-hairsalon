@@ -57,14 +57,14 @@
 				width: #{_size(inner-width) - 25em};
 				-ms-flex: 1;
 
-				> .inner {
-					@include vendor('transform', 'translateX(0) translateY(0)');
-					@include vendor('transition', (
-						'opacity #{_duration(activation)} ease',
-						'transform #{_duration(activation)} ease'
-					));
-					opacity: 1;
-				}
+				// > .inner {
+				// 	@include vendor('transform', 'translateX(0) translateY(0)');
+				// 	@include vendor('transition', (
+				// 		'opacity #{_duration(activation)} ease',
+				// 		'transform #{_duration(activation)} ease'
+				// 	));
+				// 	opacity: 1;
+				// }
 			}
 			
 			&:nth-child(3) {
@@ -78,21 +78,21 @@
 				background-color: _palette(bg2-medium);
 			}
 
-			&.inactive,
-			body.is-preload & {
-				> .image {
-					&:before {
-						opacity: 1;
-					}
-				}
+			// &.inactive,
+			// body.is-preload & {
+			// 	> .image {
+			// 		&:before {
+			// 			opacity: 1;
+			// 		}
+			// 	}
 
-				> .content {
-					> .inner {
-						@include vendor('transform', 'translateX(-1em)');
-						opacity: 0;
-					}
-				}
-			}
+			// 	> .content {
+			// 		> .inner {
+			// 			@include vendor('transform', 'translateX(-1em)');
+			// 			opacity: 0;
+			// 		}
+			// 	}
+			// }
 
 			@include breakpoint('<=xlarge') {
 				> .content {
@@ -112,14 +112,28 @@
 					width: 100%;
 				}
 
-				&.inactive,
-				body.is-preload & {
-					> .content {
-						> .inner {
-							@include vendor('transform', 'translateY(1em)');
-						}
-					}
+
+			@include breakpoint('<=medium') {
+				display: block;
+
+				> .image {
+					width: 100%;
+					height: 50vh;
 				}
+
+				> .content {
+					width: 100%;
+				}
+
+			// 	&.inactive,
+			// 	body.is-preload & {
+			// 		> .content {
+			// 			> .inner {
+			// 				@include vendor('transform', 'translateY(1em)');
+			// 			}
+			// 		}
+			// 	}
+			// }
 			}
 
 			@include breakpoint('<=small') {
@@ -134,9 +148,53 @@
 			}
 		}
 	}
+}
 
 	.spotlights.noGradient {
 		> section {
 					background-color: _palette(bg);	
+		}
+	}
+
+	.spotlights.spotlight-fade {
+		> section {
+			> .content {
+				> .inner {
+					@include vendor('transform', 'translateX(0) translateY(0)');
+					@include vendor('transition', (
+						'opacity #{_duration(activation)} ease',
+						'transform #{_duration(activation)} ease'
+					));
+					opacity: 1;
+				}
+			}
+
+			&.inactive,
+			body.is-preload & {
+				> .image {
+					&:before {
+						opacity: 1;
+					}
+				}
+
+				> .content {
+					> .inner {
+						@include vendor('transform', 'translateX(-1em)');
+						opacity: 0;
+					}
+				}
+			}
+
+			@include breakpoint('<=medium') {
+				&.inactive,
+				body.is-preload & {
+					> .content {
+						> .inner {
+							@include vendor('transform', 'translateY(1em)');
+						}
+					}
+				}
+			}
+
 		}
 	}

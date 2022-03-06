@@ -2791,34 +2791,12 @@ body.is-ie .spotlights > section {
   -ms-flex: 1;
 }
 
-.spotlights > section > .content > .inner {
-  -webkit-transform: translateX(0) translateY(0);
-  transform: translateX(0) translateY(0);
-  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
-  transition: opacity 1s ease, -webkit-transform 1s ease;
-  transition: opacity 1s ease, transform 1s ease;
-  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
-  opacity: 1;
-}
-
 .spotlights > section:nth-child(2) {
   background-color: rgba(235, 197, 29, 0.05);
 }
 
 .spotlights > section:nth-child(1) {
   background-color: rgba(235, 197, 29, 0.1);
-}
-
-.spotlights > section.inactive > .image:before,
-body.is-preload .spotlights > section > .image:before {
-  opacity: 1;
-}
-
-.spotlights > section.inactive > .content > .inner,
-body.is-preload .spotlights > section > .content > .inner {
-  -webkit-transform: translateX(-1em);
-  transform: translateX(-1em);
-  opacity: 0;
 }
 
 @media screen and (max-width: 1680px) {
@@ -2838,14 +2816,22 @@ body.is-preload .spotlights > section > .content > .inner {
   .spotlights > section > .content {
     width: 100%;
   }
-  .spotlights > section.inactive > .content > .inner,
-  body.is-preload .spotlights > section > .content > .inner {
-    -webkit-transform: translateY(1em);
-    transform: translateY(1em);
+}
+
+@media screen and (max-width: 980px) and (max-width: 980px) {
+  .spotlights > section {
+    display: block;
+  }
+  .spotlights > section > .image {
+    width: 100%;
+    height: 50vh;
+  }
+  .spotlights > section > .content {
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 980px) and (max-width: 736px) {
   .spotlights > section > .image {
     height: 50vh;
     min-height: 15em;
@@ -2857,6 +2843,36 @@ body.is-preload .spotlights > section > .content > .inner {
 
 .spotlights.noGradient > section {
   background-color: #f9f9fb;
+}
+
+.spotlights.spotlight-fade > section > .content > .inner {
+  -webkit-transform: translateX(0) translateY(0);
+  transform: translateX(0) translateY(0);
+  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
+  opacity: 1;
+}
+
+.spotlights.spotlight-fade > section.inactive > .image:before,
+body.is-preload .spotlights.spotlight-fade > section > .image:before {
+  opacity: 1;
+}
+
+.spotlights.spotlight-fade > section.inactive > .content > .inner,
+body.is-preload .spotlights.spotlight-fade > section > .content > .inner {
+  -webkit-transform: translateX(-1em);
+  transform: translateX(-1em);
+  opacity: 0;
+}
+
+@media screen and (max-width: 980px) {
+  .spotlights.spotlight-fade > section.inactive > .content > .inner,
+  body.is-preload .spotlights.spotlight-fade > section > .content > .inner {
+    -webkit-transform: translateY(1em);
+    transform: translateY(1em);
+  }
 }
 
 /* Table */
